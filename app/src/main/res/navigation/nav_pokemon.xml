@@ -9,5 +9,18 @@
         android:id="@+id/fragmentoListaPokemon"
         android:name="com.example.pokedex.vistas.FragmentoListaPokemon"
         android:label="fragment_fragmento_lista_pokemon"
-        tools:layout="@layout/fragment_fragmento_lista_pokemon" />
+        tools:layout="@layout/fragment_fragmento_lista_pokemon" >
+        <action
+            android:id="@+id/action_fragmentoListaPokemon_to_fragmentoPokeDetalle"
+            app:destination="@id/fragmentoPokeDetalle" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentoPokeDetalle"
+        android:name="com.example.pokedex.vistas.FragmentoPokeDetalle"
+        android:label="fragment_fragmento_poke_detalle"
+        tools:layout="@layout/fragment_fragmento_poke_detalle" >
+        <action
+            android:id="@+id/action_fragmentoPokeDetalle_to_fragmentoListaPokemon"
+            app:destination="@id/fragmentoListaPokemon" />
+    </fragment>
 </navigation>

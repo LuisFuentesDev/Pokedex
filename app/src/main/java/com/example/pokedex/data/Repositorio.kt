@@ -15,8 +15,8 @@ class Repositorio(private val pokeApi: PokeApi, private val pokeDao: PokeDao) {
         if (respuesta.isSuccessful) {
             val resp = respuesta.body()
             resp?.let { pokemonList ->
-                val pokeEntityList = pokemonList.map { pokemon ->
-                    PokeEntity(pokemon.name, pokemon.url)
+                val pokeEntityList = pokemonList.results.map { pokemon ->
+                    PokeEntity(pokemon.name,pokemon.url)
                 }
                 pokeDao.insertPokemon(pokeEntityList)
             }

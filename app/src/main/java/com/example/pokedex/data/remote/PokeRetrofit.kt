@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class PokeRetrofit {
     companion object {
-        private const val URL_BASE = "https://pokeapi.co/api/v2/pokemon/"
+        private const val URL_BASE = "https://pokeapi.co/api/"
 
         fun getPokeRetrofit(): PokeApi {
             val mRetrofit = Retrofit.Builder()

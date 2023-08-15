@@ -14,4 +14,5 @@ interface PokeDao {
 
     @Query("SELECT * FROM tabla_pokemon ORDER BY name ASC")
     fun getPokemon(): LiveData<List<PokeEntity>>
+
 }
